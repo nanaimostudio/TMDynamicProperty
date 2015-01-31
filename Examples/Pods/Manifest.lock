@@ -1,0 +1,14 @@
+PODS:
+  - TMDynamicProperty (0.0.1)
+
+DEPENDENCIES:
+  - TMDynamicProperty (from `../`)
+
+EXTERNAL SOURCES:
+  TMDynamicProperty:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TMDynamicProperty: 0dafef9c6d388d959ca0838fbec4c4eaba8260e7
+
+COCOAPODS: 0.34.4
