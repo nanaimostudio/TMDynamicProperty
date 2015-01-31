@@ -88,11 +88,14 @@ static void doubleSetter(NSObject *self, SEL _cmd, double value) {
 
 static id objectGetter(NSObject *self, SEL _cmd) {
     NSString *key = [self defaultsKeyForSelector:_cmd];
-    return [self.TM_storeDictionary objectForKey:key];
+//    return [self.TM_storeDictionary objectForKey:key];
+    return objc_getAssociatedObject(self, (__bridge const void *)(key));
 }
 
 static void objectSetter(NSObject *self, SEL _cmd, id object) {
     NSString *key = [self defaultsKeyForSelector:_cmd];
+//    objc_setAssociatedObject(self, (__bridge const void *)(key) , object, OBJC_ASSOCIATION_RETAIN);
+//    return;
     if (object) {
         [self.TM_storeDictionary setObject:object forKey:key];
     } else {
